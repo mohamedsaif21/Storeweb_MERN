@@ -1,0 +1,82 @@
+/* BakeryShop.css - Additional styles for the Bakery Shop component */
+
+/* Navigation improvements */
+.navbar-brand {
+  font-weight: bold;
+  color: #8B4513 !important;
+}
+
+/* Card hover effects */
+.card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: 1px solid #dee2e6;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling improvements */
+.btn-primary {
+  background-color: #8B4513;
+  border-color: #8B4513;
+}
+
+.btn-primary:hover {
+  background-color: #A0522D;
+  border-color: #A0522D;
+}
+
+/* Footer button styling */
+.btn-link.text-light {
+  color: #f8f9fa !important;
+  text-decoration: none !important;
+}
+
+.btn-link.text-light:hover {
+  color: #e9ecef !important;
+  text-decoration: underline !important;
+}
+
+/* Welcome message styling */
+.nav-link {
+  color: #8B4513 !important;
+}
+
+/* Search button styling */
+.btn-outline-success {
+  color: #8B4513;
+  border-color: #8B4513;
+}
+
+.btn-outline-success:hover {
+  background-color: #8B4513;
+  border-color: #8B4513;
+}
+
+/* Card image styling */
+.card-img-top {
+  border-bottom: 2px solid #8B4513;
+}
+
+/* Footer improvements */
+footer h5 {
+  color: #f8f9fa;
+  margin-bottom: 1rem;
+}
+
+footer p, footer li {
+  color: #ced4da;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 1rem;
+  }
+  
+  .navbar-nav .nav-link {
+    text-align: center;
+  }
+}

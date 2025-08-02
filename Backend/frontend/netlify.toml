@@ -1,6 +1,7 @@
 # Netlify Build Configuration
 [build]
-  publish = "build"
+  base = "Backend/frontend"
+  publish = "Backend/frontend/build"
   command = "npm run build"
 
 [[redirects]]

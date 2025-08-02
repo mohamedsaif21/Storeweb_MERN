@@ -108,3 +108,6 @@ Backend/frontend/.eslintcache
 package-lock.json
 Backend/package-lock.json
 Backend/frontend/package-lock.json
+
+# Local Netlify folder
+.netlify

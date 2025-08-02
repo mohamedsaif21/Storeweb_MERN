@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import config from '../config';
 
 const VerifyOTP = () => {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ const VerifyOTP = () => {
   const handleResetPassword = async e => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:7000/api/auth/reset-password', {
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/reset-password`, {
         email,
         otp,
         newPassword,

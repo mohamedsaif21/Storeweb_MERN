@@ -1,38 +1,38 @@
-// pages/ForgotPassword.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './login.css';
 
 const ForgotPassword = () => {
-  const [email, setEmail] = useState('');
   const navigate = useNavigate();
-  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState('');
+  const [msg, setMsg] = useState('');
 
   const handleSendOTP = async e => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:7000/api/auth/send-otp', { email });
-      setMessage("OTP sent to your email.");
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/send-otp`, { email });
+      setMsg("OTP sent to your email!");
       localStorage.setItem('resetEmail', email);
       navigate('/verify-otp');
     } catch (err) {
-      setMessage(err.response?.data?.error || "Failed to send OTP");
+      setMsg(err.response?.data?.error || "Failed to send OTP");
     }
   };
 
   return (
     <div className="login-container">
       <form className="login-form" onSubmit={handleSendOTP}>
-        <h2>Forgot Password</h2>
+        <h2>Reset Password</h2>
         <input
           type="email"
-          placeholder="Enter your registered email"
+          placeholder="Enter your email"
           value={email}
           onChange={e => setEmail(e.target.value)}
           required
         />
         <button type="submit">Send OTP</button>
-        <p>{message}</p>
+        <p>{msg}</p>
       </form>
     </div>
   );

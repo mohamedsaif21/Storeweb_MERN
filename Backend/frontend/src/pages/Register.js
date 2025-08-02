@@ -34,7 +34,7 @@ function Register() {
     }
 
     try {
-      const response = await axios.post('http://localhost:7000/api/auth/register', data);
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, data);
       console.log('Registration successful:', response.data);
       alert('Registered successfully! Redirecting to login...');
       navigate("/login");

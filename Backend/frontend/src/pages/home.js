@@ -12,7 +12,7 @@ const Home = () => {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.delete("http://localhost:7000/api/auth/delete-account", {
+      await axios.delete(`${process.env.REACT_APP_API_URL}/api/auth/delete-account`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -33,7 +33,7 @@ const Home = () => {
       {user?.profilePic && (
         <img
           className="profile-pic"
-          src={`http://localhost:7000${user?.profilePic?.url}`}
+          src={`${process.env.REACT_APP_API_URL}${user?.profilePic?.url}`}
           alt="Profile"
         />
       )}

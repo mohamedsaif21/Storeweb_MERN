@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
     try {
       console.log('Attempting login with:', { email: input.email });
-      const res = await axios.post('http://localhost:7000/api/auth/login', input);
+            const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`, input);
       console.log('Login successful:', res.data);
       login(res.data.token);
       alert('Login successful! Redirecting to Bakery Shop...');

@@ -9,4 +9,4 @@
   status = 200
 
 [build.environment]
-  REACT_APP_API_URL = "https://your-backend-url.onrender.com"
+  REACT_APP_API_URL = "https://storeweb-mern.onrender.com"
